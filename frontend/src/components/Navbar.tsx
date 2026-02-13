@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { NAV_LINKS, COMPANY } from "@/lib/constants";
+import { PulsatingButton } from "@/components/ui/PulsatingButton";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,12 +64,17 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-              className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-dark"
+            <PulsatingButton
+              pulseColor="rgba(132, 204, 22, 0.4)" // Kolor Twojego akcentu (limonkowy) z opacity
+              duration="2s"
+              className="bg-accent hover:bg-accent-dark text-sm text-white rounded-full px-4 py-1.5"
+              onClick={() => window.location.href = `tel:${COMPANY.phone.replace(/\s/g, "")}`}
             >
-              {COMPANY.phone}
-            </a>
+              <div className="flex items-center gap-2">
+                <img src="/Telefon_v2.svg" className="h-4 w-4 brightness-0 invert" alt="" />
+                <span>{COMPANY.phone}</span>
+              </div>
+            </PulsatingButton>
           </div>
 
           {/* Mobile hamburger */}

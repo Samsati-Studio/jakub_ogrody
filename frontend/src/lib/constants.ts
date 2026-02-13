@@ -4,18 +4,15 @@ export const COMPANY = {
   owner: "Jakub Szymanowicz",
   phone: "+48 123 456 789",
   email: "kontakt@ogrodajakuba.pl",
-  address: "Warszawa i okolice",
+  address: "Rawicz, Leszno i Wrocław",
   areas: [
-    "Warszawa",
-    "Piaseczno",
-    "Konstancin-Jeziorna",
-    "Józefosław",
-    "Lesznowola",
-    "Pruszków",
-    "Grodzisk Mazowiecki",
-    "Nadarzyn",
-    "Raszyn",
-    "Wilanów",
+    "Rawicz",
+    "Leszno",
+    "Wrocław",
+    "Wschowa",
+    "Krobia",
+    "Głogów",
+    "Lubin",
   ],
   description:
     "Profesjonalne usługi ogrodnicze — projektowanie, zakładanie i pielęgnacja ogrodów na terenie Warszawy i okolic.",
@@ -23,7 +20,6 @@ export const COMPANY = {
 };
 
 export const NAV_LINKS = [
-  { label: "Strona główna", href: "#hero" },
   { label: "O nas", href: "#o-nas" },
   { label: "Usługi", href: "#uslugi" },
   { label: "Realizacje", href: "#realizacje" },

@@ -30,13 +30,13 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <h1 className="items-center text-center text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-center text-4xl font-bold leading-[1.1] text-white sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
             Tworzymy ogrody,
             <br />
             <span className="text-accent">które zachwycają</span>
           </h1>
-          <p className="items-center text-center 
-          mt-6 max-w-xl text-lg text-white/80 md:text-xl">
+          <p className="items-center text-center mx-auto 
+          mt-6 max-w-xl text-lm text-white/80 md:text-xl">
             {COMPANY.description}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-8 sm:flex-row">
