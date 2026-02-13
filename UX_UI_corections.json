@@ -1,0 +1,37 @@
+{
+  "project": "Garden Design Contact Section",
+  "goal": "Conversion to Form Lead",
+  "first5s_impression": "Premium service, easy to contact, professional botanical vibe.",
+  "audience": "Homeowners seeking professional garden landscaping.",
+  "directions": [
+    {
+      "id": "DIR_FORM_FOCUS",
+      "rationale": "Wykorzystanie asymetrii i cieniowania, aby formularz stał się centralnym punktem akcji (focal point).",
+      "mood": ["Trust", "Nature", "Premium"],
+      "palette": ["#1A2E1A (Dark Green)", "#5D8736 (Primary)", "#FFFFFF", "#F9FAFB"],
+      "typography": {"headline": "font-bold text-2xl", "body": "text-base"},
+      "layout": "Grid 12 cols: Info (span 5), Form (span 7) + Card Styling",
+      "sample_headline": "Zaprojektujmy Twoją oazę spokoju",
+      "sample_CTA": "Wyślij bezpłatne zapytanie"
+    }
+  ],
+  "production": {
+    "assets": [
+      {"name": "Form_Container", "size": [null, null], "format": "React Component", "dpi": 0}
+    ],
+    "accessibility": [
+      {"element": "Input_Labels", "contrast": 4.5},
+      {"element": "Primary_Button", "contrast": 7.0}
+    ]
+  },
+  "iterationPlan": [
+    "1. Zmiana siatki z gap-12 na asymetryczną (np. 5/7).",
+    "2. Dodanie tła dla sekcji formularza (Light Grey/Green tint) dla kontrastu z białą kartą.",
+    "3. Implementacja mikro-interakcji na polach input (border-primary na focus)."
+  ],
+  "testChecklist": [
+    "Czy formularz jest w białym kontenerze z cieniem?",
+    "Czy dane kontaktowe są wizualnie lżejsze od formularza?",
+    "Czy pola formularza mają czytelne placeholdery i labelki?"
+  ]
+}

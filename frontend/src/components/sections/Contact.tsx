@@ -28,8 +28,6 @@ export default function Contact() {
       name: formData.get("name") as string,
       phone: formData.get("phone") as string,
       email: formData.get("email") as string,
-      location: formData.get("location") as string,
-      propertySize: formData.get("propertySize") as string,
       serviceType: formData.get("serviceType") as string,
       message: formData.get("message") as string,
     };
@@ -69,7 +67,7 @@ export default function Contact() {
   }
 
   const inputClass =
-    "w-full rounded-xl border border-sage bg-white px-4 py-3 text-dark transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
+    "w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-dark transition-all focus:border-accent focus:bg-white focus:outline-none focus:ring-1 focus:ring-accent/30";
   const labelClass = "mb-1 block text-sm font-medium text-dark";
   const errorClass = "mt-1 text-sm text-red-600";
 
@@ -79,9 +77,9 @@ export default function Contact() {
         Kontakt
       </SectionHeading>
 
-      <div className="grid gap-12 md:grid-cols-2">
+      <div className="grid gap-12 md:grid-cols-12 items-start">
         {/* Contact info */}
-        <AnimateOnScroll>
+        <AnimateOnScroll className="md:col-span-5">
           <div className="space-y-6">
             <div>
               <h3 className="mb-4 text-xl font-bold text-dark">
@@ -170,10 +168,10 @@ export default function Contact() {
         </AnimateOnScroll>
 
         {/* Form */}
-        <AnimateOnScroll delay={0.2}>
+        <AnimateOnScroll delay={0.2} className="md:col-span-7">
           <form
             onSubmit={handleSubmit}
-            className="space-y-4 rounded-2xl bg-white p-6 shadow-sm md:p-8"
+            className="space-y-5 rounded-3xl bg-white p-6 shadow-xl shadow-gray-200/50 border border-gray-100 md:p-10"
           >
             {serverError && (
               <div className="rounded-lg bg-red-50 p-4 text-sm text-red-700">
@@ -224,34 +222,6 @@ export default function Contact() {
               />
               {errors.email && <p className={errorClass}>{errors.email[0]}</p>}
             </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div>
-                <label htmlFor="location" className={labelClass}>
-                  Lokalizacja
-                </label>
-                <input
-                  id="location"
-                  name="location"
-                  type="text"
-                  className={inputClass}
-                  placeholder="Np. Piaseczno"
-                />
-              </div>
-              <div>
-                <label htmlFor="propertySize" className={labelClass}>
-                  Wielkość działki
-                </label>
-                <input
-                  id="propertySize"
-                  name="propertySize"
-                  type="text"
-                  className={inputClass}
-                  placeholder="Np. 500 m²"
-                />
-              </div>
-            </div>
-
             <div>
               <label htmlFor="serviceType" className={labelClass}>
                 Rodzaj usługi
@@ -288,7 +258,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="w-full rounded-full bg-accent px-8 py-3 font-semibold text-white transition-colors hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
+              {isSubmitting ? "Wysyłanie..." : "Odbierz darmową wycenę"}
             </button>
           </form>
         </AnimateOnScroll>

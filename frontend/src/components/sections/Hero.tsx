@@ -30,17 +30,30 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <h1 className="text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="items-center text-center text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Tworzymy ogrody,
             <br />
             <span className="text-accent">które zachwycają</span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/80 md:text-xl">
+          <p className="items-center text-center 
+          mt-6 max-w-xl text-lg text-white/80 md:text-xl">
             {COMPANY.description}
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button href="#kontakt">Bezpłatna wycena</Button>
-            <Button href="#realizacje" variant="secondary">
+          <div className="mt-10 flex flex-col items-center justify-center gap-8 sm:flex-row">
+            {/* Przycisk Główny */}
+            <Button 
+              href="#kontakt" 
+              className="px-12 py-5 text-lg sm:px-16 sm:py-5 sm:text-xl font-bold"
+            >
+              Bezpłatna wycena
+            </Button>
+
+            {/* Przycisk Wtórny */}
+            <Button 
+              href="#realizacje" 
+              variant="secondary" 
+              className="px-12 py-5 text-lg sm:px-16 sm:py-5 sm:text-xl font-bold"
+            >
               Zobacz realizacje
             </Button>
           </div>
