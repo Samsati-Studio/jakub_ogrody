@@ -45,15 +45,15 @@ export default function Services() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((service, index) => (
-          <AnimateOnScroll key={service.title} delay={index * 0.1}>
-            <div className="group rounded-2xl border border-sage bg-white p-8 transition-all hover:border-accent/30 hover:shadow-lg">
-              <div className="mb-4 inline-flex rounded-xl bg-sage p-3 text-primary transition-colors group-hover:bg-accent/10 group-hover:text-accent">
+          <AnimateOnScroll key={service.title} delay={index * 0.1} className="h-full">
+            <div className="group flex h-full flex-col rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/20 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+              <div className="mb-5 w-fit rounded-xl bg-accent/10 p-3 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
                 {iconMap[service.icon]}
               </div>
-              <h3 className="mb-3 text-lg font-bold text-dark">
+              <h3 className="mb-3 text-xl font-bold text-dark">
                 {service.title}
               </h3>
-              <p className="text-sm text-dark/70">{service.description}</p>
+              <p className="min-h-0 flex-1 text-slate-600 leading-relaxed">{service.description}</p>
             </div>
           </AnimateOnScroll>
         ))}
