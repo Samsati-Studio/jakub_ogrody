@@ -13,7 +13,7 @@ export default function AboutOwner() {
         <AnimateOnScroll>
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
             <Image
-              src="/owner.jpg"
+              src="/persona.jpg"
               alt={COMPANY.owner}
               fill
               className="object-cover"

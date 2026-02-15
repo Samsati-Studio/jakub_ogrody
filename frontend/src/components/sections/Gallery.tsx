@@ -55,7 +55,7 @@ const PLACEHOLDER_ITEMS: GalleryItem[] = [
     slug: { current: "ogrod-rodzinny" },
     category: "zakladanie",
     location: "Krobia",
-    mainImage: "/trangiahung159-family-7977570_1920.jpg",
+    mainImage: "/persona.jpg",
     description: "Funkcjonalny ogród dla całej rodziny.",
     featured: true,
     order: 5,

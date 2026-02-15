@@ -14,7 +14,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster="/hero-fallback.jpg"
+          poster="persona.jpg"
           className="h-full w-full object-cover"
         >
           <source src="/jakub_garden.mp4" type="video/mp4" />
