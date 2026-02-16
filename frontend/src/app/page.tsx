@@ -1,6 +1,6 @@
 import JsonLd from "@/components/JsonLd";
 import Hero from "@/components/sections/Hero";
-import WhyUs from "@/components/sections/WhyUs";
+import WhyUs, { WhyUsMobile } from "@/components/sections/WhyUs";
 import AboutOwner from "@/components/sections/AboutOwner";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
@@ -18,6 +18,7 @@ export default function Home() {
       <JsonLd />
       <Hero />
       <WhyUs />
+      <WhyUsMobile />
       <AboutOwner />
       <Services />
       <Process />
