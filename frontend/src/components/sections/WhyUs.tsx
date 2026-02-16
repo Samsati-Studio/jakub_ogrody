@@ -6,7 +6,7 @@ import { WHY_US } from "@/lib/constants";
 const iconMap: Record<string, React.ReactNode> = {
   experience: (
     <svg
-      className="h-5 w-5"
+      className="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -21,7 +21,7 @@ const iconMap: Record<string, React.ReactNode> = {
   ),
   clock: (
     <svg
-      className="h-5 w-5"
+      className="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -36,7 +36,7 @@ const iconMap: Record<string, React.ReactNode> = {
   ),
   quality: (
     <svg
-      className="h-5 w-5"
+      className="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -61,18 +61,18 @@ export default function WhyUs() {
         className="border-y border-slate-100 bg-transparent"
       >
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-center gap-5 py-2.5">
+          <div className="flex items-center justify-center gap-5 py-3.5">
             {WHY_US.map((item, index) => (
               <div
                 key={item.title}
-                className="flex items-center gap-2 shrink-0"
+                className="flex items-center gap-5 shrink-0"
               >
                 <div className="text-accent">{iconMap[item.icon]}</div>
-                <span className="text-sm md:text-base font-medium tracking-wide whitespace-nowrap">
+                <span className="text-md md:text-xl font-medium tracking-wide whitespace-nowrap">
                   {item.title}
                 </span>
                 {index < WHY_US.length - 1 && (
-                  <span className="ml-5 text-accent/30">|</span>
+                  <span className="ml-6 text-accent/30">|</span>
                 )}
               </div>
             ))}
