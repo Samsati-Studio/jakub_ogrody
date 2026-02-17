@@ -5,12 +5,12 @@ import { PROCESS_STEPS } from "@/lib/constants";
 
 export default function Process() {
   return (
-    <Section id="proces" className="bg-sage">
+    <Section id="proces">
       <SectionHeading subtitle="Przejrzysty proces od pierwszego kontaktu do gotowego ogrodu">
         Jak pracujemy
       </SectionHeading>
 
-      <div className="grid gap-8 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4">
         {PROCESS_STEPS.map((step, index) => (
           <AnimateOnScroll key={step.step} delay={index * 0.15}>
             <div className="relative text-center">

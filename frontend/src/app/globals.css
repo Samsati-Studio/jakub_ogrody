@@ -44,10 +44,11 @@
 
 html {
   scroll-behavior: smooth;
+  background: #ffffff;
 }
 
 body {
-  background: var(--color-light);
+  background: inherit;
   color: var(--color-dark);
   font-family: var(--font-sans), system-ui, sans-serif;
   font-size: 1.05rem;

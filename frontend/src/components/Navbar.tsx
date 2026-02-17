@@ -119,7 +119,7 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <ContactButton className="mt-10 text-lg font-bold px-8 w-full max-w-[240px]" />          </div>
+            <ContactButton className="mt-10 text-base sm:text-lg font-bold px-6 sm:px-8 w-full max-w-[220px] sm:max-w-[240px]" />          </div>
         </div>
       )}
     </nav>

@@ -23,7 +23,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:py-32 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,16 +43,16 @@ export default function Hero() {
             {/* Przycisk Główny */}
             <Button 
               href="#kontakt" 
-              className="px-12 py-5 text-lg sm:px-16 sm:py-5 sm:text-xl font-bold"
+              className="px-8 py-4 text-base sm:px-12 sm:py-5 sm:text-lg font-bold"
             >
               Bezpłatna wycena
             </Button>
 
             {/* Przycisk Wtórny */}
-            <Button 
-              href="#realizacje" 
-              variant="secondary" 
-              className="px-12 py-5 text-lg sm:px-16 sm:py-5 sm:text-xl font-bold"
+            <Button
+              href="#realizacje"
+              variant="secondary"
+              className="px-8 py-4 text-base sm:px-12 sm:py-5 sm:text-lg font-bold"
             >
               Zobacz realizacje
             </Button>

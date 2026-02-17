@@ -32,13 +32,13 @@ export default function TestimonialsMarquee({
         {testimonials.map((t) => (
           <div
             key={t._id}
-            className="flex w-[320px] shrink-0 flex-col rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
+            className="flex w-[280px] sm:w-[320px] shrink-0 flex-col rounded-2xl border border-dark/5 bg-white p-6 shadow-sm"
           >
             <StarRating rating={t.rating} className="mb-3" />
             <blockquote className="mb-4 flex-1 text-sm leading-relaxed text-slate-600">
               &ldquo;{t.quote}&rdquo;
             </blockquote>
-            <div className="border-t border-slate-100 pt-3">
+            <div className="border-t border-dark/5 pt-3">
               <p className="font-semibold text-dark">{t.name}</p>
               {t.location && (
                 <p className="text-xs text-slate-500">{t.location}</p>

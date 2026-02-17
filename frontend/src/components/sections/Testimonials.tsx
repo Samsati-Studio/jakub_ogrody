@@ -7,7 +7,7 @@ export default async function Testimonials() {
   const testimonials = await getTestimonials();
 
   return (
-    <Section id="opinie" className="bg-sage">
+    <Section id="opinie">
       <SectionHeading subtitle="Co mówią o nas nasi klienci">
         Opinie klientów
       </SectionHeading>
