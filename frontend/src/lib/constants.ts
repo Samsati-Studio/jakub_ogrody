@@ -52,18 +52,6 @@ export const SERVICES = [
       "Projektowanie i montaż automatycznych systemów nawadniania, które zapewnią Twojemu ogrodowi optymalną ilość wody.",
     icon: "water",
   },
-  {
-    title: "Oświetlenie ogrodowe",
-    description:
-      "Instalacja oświetlenia ogrodowego LED, które podkreśli piękno Twojego ogrodu po zmroku i zapewni bezpieczeństwo.",
-    icon: "light",
-  },
-  {
-    title: "Budowa tarasów i ścieżek",
-    description:
-      "Wykonanie tarasów, ścieżek ogrodowych i nawierzchni z kamienia naturalnego, kostki brukowej lub drewna.",
-    icon: "path",
-  },
 ];
 
 export const PROCESS_STEPS = [
