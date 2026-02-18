@@ -7,8 +7,8 @@ import { COMPANY, NAV_LINKS } from "@/lib/constants";
 const styles = {
   // Typography
   heading:
-    "mb-3 !text-sm !leading-normal !font-medium uppercase tracking-widest text-white",
-  headingLg: "mb-2 !text-base !leading-snug !font-medium text-white",
+    "mb-3 text-sm font-medium uppercase tracking-wider text-white",
+  headingLg: "mb-2 text-lg font-semibold text-white",
   body: "text-sm text-white/70",
   bodyRelaxed: "mb-4 text-sm leading-relaxed text-white/70",
   muted: "text-xs text-white/40",
@@ -86,8 +86,8 @@ export default function Footer() {
             <Image
               src="/Logo_Jakub_Ogrody.svg"
               alt={COMPANY.shortName}
-              width={180}
-              height={48}
+              width={210}
+              height={56}
               className="mb-4 h-10 w-auto brightness-0 invert"
             />
             <p className={styles.bodyRelaxed}>
