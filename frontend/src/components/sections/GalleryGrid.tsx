@@ -57,8 +57,8 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
             onClick={() => setActiveCategory(cat.value)}
             className={`rounded-full px-5 py-2 text-sm font-medium transition-colors ${
               activeCategory === cat.value
-                ? "bg-primary text-white"
-                : "bg-sage text-dark hover:bg-sage-dark"
+                ? "bg-accent text-white"
+                : "border border-primary/40 text-dark/70 hover:border-primary hover:text-dark"
             }`}
           >
             {cat.label}

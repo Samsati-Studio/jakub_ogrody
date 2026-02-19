@@ -1,5 +1,5 @@
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "ghost";
   href?: string;
   children: React.ReactNode;
 }
@@ -17,6 +17,8 @@ export default function Button({
     primary: "bg-accent text-white hover:bg-accent-dark",
     secondary:
       "border-2 border-primary text-primary hover:bg-primary hover:text-white",
+    ghost:
+      "border-2 border-white/70 text-white hover:border-white hover:bg-white/10",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;

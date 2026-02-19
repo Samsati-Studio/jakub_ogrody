@@ -51,7 +51,7 @@ export default function Hero() {
             {/* Przycisk Wtórny */}
             <Button
               href="#realizacje"
-              variant="secondary"
+              variant="ghost"
               className="px-8 py-4 text-base sm:px-12 sm:py-5 sm:text-lg font-bold"
             >
               Zobacz realizacje

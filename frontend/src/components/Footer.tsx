@@ -27,7 +27,7 @@ const styles = {
   areaTag: "rounded-full bg-white/10 px-3 py-1 text-xs text-white/70",
 
   // CTA button
-  cta: "inline-block rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-accent-dark hover:shadow-xl",
+  cta: "inline-block rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-accent-dark hover:shadow-xl",
 
   // Layout
   footer: "border-t border-white/10 bg-primary text-white",
