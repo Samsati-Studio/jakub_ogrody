@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { COMPANY } from "@/lib/constants";
 
 const inter = Inter({
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Navbar />
         <main className="bg-white">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

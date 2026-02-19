@@ -2,7 +2,7 @@ export const COMPANY = {
   name: "Usługi Ogrodnicze Jakub Szymanowicz",
   shortName: "Ogrody Jakuba",
   owner: "Jakub Szymanowicz",
-  phone: "+48 123 456 789",
+  phone: "+48 607 871 019",
   email: "kontakt@ogrodajakuba.pl",
   address: "Rawicz, Leszno i Wrocław",
   areas: [
