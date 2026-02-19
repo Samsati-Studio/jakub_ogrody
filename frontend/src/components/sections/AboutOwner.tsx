@@ -6,28 +6,16 @@ import { COMPANY } from "@/lib/constants";
 
 export default function AboutOwner() {
   return (
-    <Section id="o-nas">
+    <Section id="o-nas" className="!py-12 md:!py-12">
       <SectionHeading>O nas</SectionHeading>
 
-      <div className="grid items-center gap-12 md:grid-cols-2">
-        <AnimateOnScroll>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-            <Image
-              src="/persona.jpg"
-              alt={COMPANY.owner}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </AnimateOnScroll>
-
-        <AnimateOnScroll delay={0.2}>
+      <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-5">
+        <AnimateOnScroll className="md:col-span-3">
           <div>
-            <h3 className="mb-2 text-2xl font-bold text-dark">
+            <h3 className="mb-2 text-center text-3xl font-bold text-dark md:text-left">
               {COMPANY.owner}
             </h3>
-            <p className="mb-6 text-lg font-medium text-accent">
+            <p className="mb-6 text-center text-lg font-medium text-accent md:text-left">
               Założyciel & Główny Projektant
             </p>
             <div className="space-y-4 text-dark/80">
@@ -48,6 +36,21 @@ export default function AboutOwner() {
                 ogrodzie i pomogę go stworzyć.
               </p>
             </div>
+            <p className="mt-8 text-lg italic text-dark/70">
+              Jakub Szymanowicz — Właściciel
+            </p>
+          </div>
+        </AnimateOnScroll>
+
+        <AnimateOnScroll delay={0.2} className="w-full md:col-span-2">
+          <div className="relative mx-auto aspect-[3/4] max-h-[500px] max-w-sm overflow-hidden rounded-3xl md:max-w-none">
+            <Image
+              src="/persona.jpg"
+              alt={COMPANY.owner}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 40vw"
+            />
           </div>
         </AnimateOnScroll>
       </div>

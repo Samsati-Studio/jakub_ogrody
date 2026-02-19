@@ -38,7 +38,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function Services() {
   return (
-    <Section id="uslugi">
+    <Section id="uslugi" className="bg-light">
       <SectionHeading subtitle="Kompleksowa oferta usług ogrodniczych">
         Nasze usługi
       </SectionHeading>

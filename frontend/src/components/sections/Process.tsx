@@ -15,13 +15,13 @@ export default function Process() {
           <AnimateOnScroll key={step.step} delay={index * 0.15}>
             <div className="relative text-center">
               {/* Step number */}
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/90 text-xl font-bold text-white hover:bg-accent transition-colors duration-300">
                 {step.step}
               </div>
 
               {/* Connector line */}
               {index < PROCESS_STEPS.length - 1 && (
-                <div className="absolute left-[calc(50%+2rem)] top-7 hidden h-0.5 w-[calc(100%-4rem)] bg-primary/20 md:block" />
+                <div className="absolute left-[calc(55%+2rem)] top-7 hidden h-0.5 w-[calc(100%-4rem)] bg-primary/20 md:block" />
               )}
 
               <h3 className="mb-2 text-lg font-bold text-dark">{step.title}</h3>

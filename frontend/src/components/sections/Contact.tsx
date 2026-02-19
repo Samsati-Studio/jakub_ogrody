@@ -88,16 +88,16 @@ export default function Contact() {
         Kontakt
       </SectionHeading>
 
-      <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-2 lg:gap-16 items-start">
+      <div className="mx-auto max-w-7xl flex flex-col-reverse lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
         
         {/* LEWA KOLUMNA — FAQ + INFO */}
         <AnimateOnScroll className="space-y-8">
 
-            <div className="mb-6">
+            <div className="mb-8 my-6 md:my-8">
               <h3 className="text-2xl font-bold text-dark">Najczęściej zadawane pytania</h3>
             </div>
 
-          <div className="space-y-3">
+          <div className="space-y-5">
             {FAQ_CONTACT.map((item, index) => (
               <div key={index} className={`overflow-hidden rounded-2xl border bg-white transition-colors duration-300 ${openFaq === index ? "border-accent/20" : "border-slate-200"}`}>
                 <button
@@ -118,7 +118,7 @@ export default function Contact() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col items-center justify-center space-y-4">
+          <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-4">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-primary"><svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="white" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg></div>
               <a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`} className="font-medium text-dark hover:text-accent">{COMPANY.phone}</a>
@@ -131,8 +131,12 @@ export default function Contact() {
         </AnimateOnScroll>
 
         {/* PRAWA KOLUMNA — FORMULARZ (Styl oryginalny, układ skompaktowany) */}
-        <AnimateOnScroll delay={0.2}>
-          <form onSubmit={handleSubmit} className="space-y-4 rounded-3xl bg-white p-8 shadow-xl border border-dark/5 lg:p-10">
+        <AnimateOnScroll delay={0.2} className="w-full">
+          <form onSubmit={handleSubmit} className="w-full space-y-4 rounded-3xl bg-white p-8 shadow-2xl border border-dark/5 border-t-4 border-t-accent lg:p-10">
+            <div className="mb-2">
+              <h3 className="text-2xl font-bold text-dark">Darmowa wycena</h3>
+              <p className="text-sm text-dark/60">Zostaw dane, odezwiemy się w ciągu 24h.</p>
+            </div>
             {serverError && <div className="rounded-lg bg-red-50 p-4 text-sm text-red-700">{serverError}</div>}
           
             {/* Imię i Telefon w jednym rzędzie dla oszczędności miejsca */}

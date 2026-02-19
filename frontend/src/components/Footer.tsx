@@ -7,7 +7,7 @@ import { COMPANY, NAV_LINKS } from "@/lib/constants";
 const styles = {
   // Typography
   heading:
-    "mb-3 text-sm font-medium uppercase tracking-wider text-white",
+    "mb-3 text-sm font-medium text-white",
   headingLg: "mb-2 text-lg font-semibold text-white",
   body: "text-sm text-white/70",
   bodyRelaxed: "mb-4 text-sm leading-relaxed text-white/70",

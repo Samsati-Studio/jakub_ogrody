@@ -28,7 +28,7 @@ export default function WhyUs() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 1 }}
-      className="py-4"
+      className="border-y border-sage/20 bg-light py-5"
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="hidden md:flex items-center justify-center gap-10">
@@ -45,12 +45,12 @@ export default function WhyUs() {
           ))}
         </div>
 
-        <div className="flex md:hidden items-center justify-center gap-6">
+        <div className="flex md:hidden items-center justify-center gap-3">
           {WHY_US.map((item, index) => (
-            <div key={item.title} className="flex items-center gap-6">
-              <div className="flex items-center gap-2">
+            <div key={item.title} className="flex items-center gap-3">
+              <div className="flex items-center gap-1.5">
                 <div className="text-accent">{iconMap[item.icon]}</div>
-                <span className="text-xs font-semibold uppercase tracking-widest text-dark/70">{item.title}</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-dark/70">{item.title}</span>
               </div>
               {index < WHY_US.length - 1 && (
                 <span className="text-accent/30">|</span>
