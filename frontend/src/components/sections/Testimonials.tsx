@@ -97,7 +97,7 @@ export default async function Testimonials() {
 
       <TestimonialsMarquee
         testimonials={testimonials}
-        duration={45}
+        duration={165}
         repeat={4}
         pauseOnHover
       />
