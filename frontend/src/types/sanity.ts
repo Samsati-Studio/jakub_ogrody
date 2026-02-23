@@ -1,5 +1,10 @@
 import type { SanityImageSource } from "@sanity/image-url";
 
+export interface ProjectImage {
+  src: string;
+  stage: "przed" | "po";
+}
+
 export interface GalleryItem {
   _id: string;
   title: string;
@@ -9,6 +14,7 @@ export interface GalleryItem {
   mainImage: SanityImageSource | string;
   beforeImage?: SanityImageSource | string;
   afterImage?: SanityImageSource | string;
+  images?: ProjectImage[];
   description?: string;
   featured: boolean;
   order: number;

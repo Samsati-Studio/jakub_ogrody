@@ -68,29 +68,54 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
 
       {/* Image grid */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {filteredItems.map((item, index) => (
-          <AnimateOnScroll key={item._id} delay={index * 0.05}>
-            <button
-              onClick={() => setSelectedItem(item)}
-              className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl"
-            >
-              <Image
-                src={getImageSrc(item.mainImage, 600, 450)}
-                alt={item.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-              <div className="absolute bottom-0 left-0 right-0 translate-y-4 p-4 text-left opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-                <h3 className="font-semibold text-white">{item.title}</h3>
-                {item.location && (
-                  <p className="text-sm text-white/80">{item.location}</p>
+        {filteredItems.map((item, index) => {
+          const przedSrc = item.images?.find((img) => img.stage === "przed")?.src;
+
+          return (
+            <AnimateOnScroll key={item._id} delay={index * 0.05}>
+              <button
+                onClick={() => setSelectedItem(item)}
+                className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl"
+              >
+                {/* Po — default visible */}
+                <Image
+                  src={getImageSrc(item.mainImage, 600, 450)}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-opacity duration-500 group-hover:opacity-0"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+
+                {/* Przed — revealed on hover */}
+                {przedSrc && (
+                  <Image
+                    src={przedSrc}
+                    alt={`${item.title} — przed`}
+                    fill
+                    className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                 )}
-              </div>
-            </button>
-          </AnimateOnScroll>
-        ))}
+
+                {/* Gradient + title overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute bottom-0 left-0 right-0 translate-y-4 p-4 text-left opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                  <h3 className="font-semibold text-white">{item.title}</h3>
+                  {item.location && (
+                    <p className="text-sm text-white/80">{item.location}</p>
+                  )}
+                </div>
+
+                {/* "Przed" badge — appears on hover */}
+                {przedSrc && (
+                  <span className="absolute left-3 top-3 rounded-full bg-black/60 px-2.5 py-1 text-xs font-medium text-white opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                    Przed
+                  </span>
+                )}
+              </button>
+            </AnimateOnScroll>
+          );
+        })}
       </div>
 
       {/* Modal */}
