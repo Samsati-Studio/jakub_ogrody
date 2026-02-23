@@ -13,8 +13,10 @@ export async function getGalleryItems(): Promise<GalleryItem[]> {
         category,
         location,
         mainImage,
-        beforeImage,
-        afterImage,
+        "images": images[] {
+          "src": image.asset->url,
+          stage
+        },
         description,
         featured,
         order
@@ -37,8 +39,10 @@ export async function getFeaturedGalleryItems(): Promise<GalleryItem[]> {
         category,
         location,
         mainImage,
-        beforeImage,
-        afterImage,
+        "images": images[] {
+          "src": image.asset->url,
+          stage
+        },
         description,
         featured,
         order

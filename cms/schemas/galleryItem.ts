@@ -52,20 +52,46 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "beforeImage",
-      title: "Zdjęcie przed",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: "afterImage",
-      title: "Zdjęcie po",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      name: "images",
+      title: "Wszystkie zdjęcia projektu",
+      type: "array",
+      description: "Dodaj wszystkie zdjęcia z oznaczeniem etapu (Przed / Po)",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "image",
+              title: "Zdjęcie",
+              type: "image",
+              options: { hotspot: true },
+              validation: (Rule) => Rule.required(),
+            }),
+            defineField({
+              name: "stage",
+              title: "Etap",
+              type: "string",
+              options: {
+                list: [
+                  { title: "Po — efekt końcowy", value: "po" },
+                  { title: "Przed — stan wyjściowy", value: "przed" },
+                ],
+                layout: "radio",
+              },
+              validation: (Rule) => Rule.required(),
+            }),
+          ],
+          preview: {
+            select: { media: "image", subtitle: "stage" },
+            prepare({ media, subtitle }: { media: unknown; subtitle: string }) {
+              return {
+                title: subtitle === "po" ? "Po" : "Przed",
+                media,
+              };
+            },
+          },
+        },
+      ],
     }),
     defineField({
       name: "description",
