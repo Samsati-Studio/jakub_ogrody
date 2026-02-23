@@ -39,9 +39,9 @@ export function Marquee({
         )}
         style={
           {
-            "--marquee-duration": `${duration}s`,
             "--marquee-repeat": repeat,
             "--marquee-gap": gap,
+            animationDuration: `${duration}s`,
           } as React.CSSProperties
         }
       >
