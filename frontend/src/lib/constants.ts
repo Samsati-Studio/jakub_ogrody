@@ -15,7 +15,7 @@ export const COMPANY = {
     "Lubin",
   ],
   description:
-    "Profesjonalne usługi ogrodnicze — projektowanie, zakładanie i pielęgnacja ogrodów na terenie Warszawy i okolic.",
+    "Profesjonalne usługi ogrodnicze — projektowanie, zakładanie i pielęgnacja ogrodów na terenie Rawicza i okolic.",
   url: "https://ogrodajakuba.pl",
 };
 
@@ -100,7 +100,7 @@ export const FAQ_ITEMS = [
   {
     question: "W jakim obszarze działacie?",
     answer:
-      "Działamy na terenie Warszawy i okolic — Piaseczno, Konstancin-Jeziorna, Józefosław, Lesznowola, Pruszków, Grodzisk Mazowiecki i inne miejscowości w promieniu 40 km od Warszawy.",
+      "Działamy w Rawiczu, Lesznie, Wrocławiu i okolicach — obsługujemy miejscowości w promieniu ~40 km, w tym Wschowę, Krobię i Głogów.",
   },
   {
     question: "Czy mogę zamówić tylko pielęgnację ogrodu?",
@@ -118,7 +118,7 @@ export const WHY_US = [
   {
     title: "Doświadczenie",
     description:
-      "Wieloletnie doświadczenie w branży ogrodniczej. Setki zrealizowanych projektów na terenie Warszawy i okolic.",
+      "Wieloletnie doświadczenie w branży ogrodniczej. Dziesiątki zrealizowanych projektów na terenie Rawicza, Leszna i okolic.",
     icon: "experience",
   },
   {

@@ -13,7 +13,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${COMPANY.shortName} — Usługi Ogrodnicze Warszawa`,
+    default: `${COMPANY.shortName} — Usługi Ogrodnicze Rawicz`,
     template: `%s | ${COMPANY.shortName}`,
   },
   description: COMPANY.description,
@@ -22,13 +22,14 @@ export const metadata: Metadata = {
     "projektowanie ogrodów",
     "zakładanie ogrodów",
     "pielęgnacja ogrodów",
-    "ogrodnik Warszawa",
-    "ogrody Piaseczno",
+    "ogrodnik Rawicz",
+    "ogrodnik Leszno",
+    "ogrody Wrocław",
     "architekt krajobrazu",
   ],
   authors: [{ name: COMPANY.owner }],
   openGraph: {
-    title: `${COMPANY.shortName} — Usługi Ogrodnicze Warszawa`,
+    title: `${COMPANY.shortName} — Usługi Ogrodnicze Rawicz`,
     description: COMPANY.description,
     url: COMPANY.url,
     siteName: COMPANY.shortName,
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/mariakray-gardening-6803874_1920.jpg",
+        width: 1920,
+        height: 1280,
         alt: COMPANY.shortName,
       },
     ],

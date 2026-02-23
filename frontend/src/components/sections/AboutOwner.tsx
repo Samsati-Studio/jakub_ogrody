@@ -21,7 +21,7 @@ export default function AboutOwner() {
             <div className="space-y-4 text-dark/80">
               <p>
                 Cześć! Jestem Jakub i od lat tworzę piękne ogrody na terenie
-                Warszawy i okolic. Moja pasja do zieleni i architektury
+                Rawicza, Leszna i Wrocławia. Moja pasja do zieleni i architektury
                 krajobrazu pozwala mi realizować projekty, które nie tylko cieszą
                 oko, ale też służą przez lata.
               </p>

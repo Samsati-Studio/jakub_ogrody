@@ -11,7 +11,7 @@ export default function JsonLd() {
     email: COMPANY.email,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Warszawa",
+      addressLocality: "Rawicz",
       addressCountry: "PL",
     },
     areaServed: COMPANY.areas.map((area) => ({
@@ -26,7 +26,7 @@ export default function JsonLd() {
       "Oświetlenie ogrodowe",
     ],
     priceRange: "$$",
-    image: `${COMPANY.url}/og-image.jpg`,
+    image: `${COMPANY.url}/mariakray-gardening-6803874_1920.jpg`,
   };
 
   return (
