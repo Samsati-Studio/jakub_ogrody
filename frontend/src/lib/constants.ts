@@ -47,7 +47,7 @@ export const SERVICES = [
     icon: "care",
   },
   {
-    title: "Systemy Nawadnianie",
+    title: "Systemy Nawadniania",
     description:
       "Zapomnij o ręcznym podlewaniu. Projektujemy i montujemy w pełni automatyczne systemy marek Rain Bird oraz Hunter, które dbają o Twój ogród za Ciebie. Zapewniamy pełny serwis, programowanie i przygotowanie instalacji do sezonu zimowego.",
     icon: "water",
