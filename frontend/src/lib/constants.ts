@@ -15,7 +15,7 @@ export const COMPANY = {
     "Lubin",
   ],
   description:
-    "Profesjonalne usługi ogrodnicze — projektowanie, zakładanie i pielęgnacja ogrodów na terenie Rawicza i okolic.",
+    "Profesjonalne usługi ogrodnicze na terenie Rawicza, Leszna, Wrocławia i okolic. Projektujemy, zakładamy i dbamy o Twoją zieleń.",
   url: "https://ogrodajakuba.pl",
 };
 
@@ -29,27 +29,27 @@ export const NAV_LINKS = [
 
 export const SERVICES = [
   {
-    title: "Projektowanie ogrodów",
+    title: "Indywidualne Projekty",
     description:
-      "Tworzymy indywidualne projekty ogrodów, które łączą estetykę z funkcjonalnością. Każdy projekt dopasowujemy do Twoich potrzeb i charakteru działki.",
+      "Tworzymy unikalne koncepcje dopasowane do architektury Twojego domu i stylu życia. Przygotujemy dla Ciebie profesjonalny dobór roślin oraz realistyczne wizualizacje 3D, dzięki którym zobaczysz swój przyszły ogród, zanim jeszcze powstanie.",
     icon: "design",
   },
   {
-    title: "Zakładanie ogrodów",
+    title: "Budowa Ogrodów",
     description:
-      "Kompleksowe zakładanie ogrodów od podstaw — przygotowanie terenu, nasadzenia, trawniki, ścieżki i elementy małej architektury.",
+      "Tworzymy ogrody, które zostają na pokolenia. Zajmujemy się wszystkim: od precyzyjnej niwelacji terenu i drenażu, przez profesjonalne nasadzenia, aż po układanie trawników z rolki lub siew trawy. Oddajemy Ci gotową, zieloną przestrzeń.",
     icon: "plant",
   },
   {
-    title: "Pielęgnacja ogrodów",
+    title: "Pielęgnacja i Serwis",
     description:
-      "Regularna pielęgnacja ogrodu: koszenie, przycinanie, nawożenie, odchwaszczanie i sezonowe porządki.",
+      "Twój ogród w najlepszych rękach przez cały rok. Oferujemy profesjonalną wertykulację trawnika, cięcie drzewek owocowych, formowanie żywopłotów oraz ochronę roślin przed szkodnikami. Dbamy o detale, byś Ty mógł cieszyć się wyłącznie wypoczynkiem.",
     icon: "care",
   },
   {
-    title: "Systemy nawadniania",
+    title: "Systemy Nawadnianie",
     description:
-      "Projektowanie i montaż automatycznych systemów nawadniania, które zapewnią Twojemu ogrodowi optymalną ilość wody.",
+      "Zapomnij o ręcznym podlewaniu. Projektujemy i montujemy w pełni automatyczne systemy marek Rain Bird oraz Hunter, które dbają o Twój ogród za Ciebie. Zapewniamy pełny serwis, programowanie i przygotowanie instalacji do sezonu zimowego.",
     icon: "water",
   },
 ];
@@ -59,25 +59,25 @@ export const PROCESS_STEPS = [
     step: 1,
     title: "Konsultacja",
     description:
-      "Bezpłatna wizyta na miejscu. Poznajemy Twoje potrzeby, omawiamy możliwości i wizję ogrodu.",
+      "Spotykamy się w Twoim ogrodzie na terenie Rawicza, Leszna lub Wrocławia. Przeprowadzamy audyt terenu, analizujemy stan gleby i słuchamy Twoich potrzeb, aby przygotować fundament pod idealny projekt.",
   },
   {
     step: 2,
     title: "Projekt",
     description:
-      "Przygotowujemy szczegółowy projekt ogrodu wraz z wizualizacją i kosztorysem.",
+      "Przygotowujemy kompletną strategię budowy Twojego ogrodu wraz z wizualizacją 3D. Otrzymasz jasny kosztorys inwestorski, dzięki czemu proces zakładania ogrodu będzie przewidywalny i przejrzysty finansowo.",
   },
   {
     step: 3,
     title: "Realizacja",
     description:
-      "Profesjonalnie wykonujemy wszystkie prace ogrodnicze zgodnie z zatwierdzonym projektem.",
+      "Przechodzimy do działania. Wykonujemy wszystkie prace: od niwelacji terenu i montażu automatycznego nawadniania, po nasadzenia i układanie trawnika z rolki. Budujemy Twój ogród sprawnie i profesjonalnie.",
   },
   {
     step: 4,
     title: "Opieka",
     description:
-      "Oferujemy stałą opiekę nad ogrodem, aby zawsze wyglądał nienagannie.",
+      "Nie zostawiamy Cię po zakończeniu prac. Oferujemy całoroczną pielęgnację, wertykulację oraz sezonowy serwis systemów nawadniających, aby Twoja zielona przestrzeń zachwycała każdego dnia.",
   },
 ];
 

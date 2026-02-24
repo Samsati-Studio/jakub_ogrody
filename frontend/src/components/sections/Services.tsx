@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
@@ -36,6 +39,44 @@ const iconMap: Record<string, React.ReactNode> = {
   ),
 };
 
+function ServiceCard({ service }: { service: typeof SERVICES[0] }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="group flex h-full flex-col rounded-3xl border border-dark/5 bg-white/80 backdrop-blur-sm p-6 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/20 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
+      <div className="mb-5 w-fit rounded-xl bg-accent/10 p-3 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
+        {iconMap[service.icon]}
+      </div>
+      <h3 className="mb-3 text-xl font-bold text-dark">{service.title}</h3>
+
+      {/* Description — always in DOM for SEO, visually clipped when collapsed */}
+      <div className="relative flex-1">
+        <div className={`overflow-hidden transition-all duration-500 ease-in-out ${open ? "max-h-96" : "max-h-[4.5rem]"}`}>
+          <p className="text-slate-600 leading-relaxed">{service.description}</p>
+        </div>
+        {/* Fade mask when collapsed */}
+        {!open && (
+          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white/80 to-transparent" />
+        )}
+      </div>
+
+      {/* Toggle */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="mt-4 flex items-center gap-1 text-sm font-semibold text-accent transition-colors hover:text-accent-dark"
+      >
+        {open ? "Zwiń" : "Czytaj więcej"}
+        <svg
+          className={`h-4 w-4 transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+  );
+}
+
 export default function Services() {
   return (
     <Section id="uslugi" className="bg-light">
@@ -46,15 +87,7 @@ export default function Services() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {SERVICES.map((service, index) => (
           <AnimateOnScroll key={service.title} delay={index * 0.1} className="h-full">
-            <div className="group flex h-full flex-col rounded-3xl border border-dark/5 bg-white/80 backdrop-blur-sm p-6 sm:p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/20 hover:bg-white hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]">
-              <div className="mb-5 w-fit rounded-xl bg-accent/10 p-3 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
-                {iconMap[service.icon]}
-              </div>
-              <h3 className="mb-3 text-xl font-bold text-dark">
-                {service.title}
-              </h3>
-              <p className="min-h-0 flex-1 text-slate-600 leading-relaxed">{service.description}</p>
-            </div>
+            <ServiceCard service={service} />
           </AnimateOnScroll>
         ))}
       </div>
