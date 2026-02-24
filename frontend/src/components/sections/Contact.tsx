@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
-import { COMPANY, SERVICES } from "@/lib/constants";
+import { COMPANY } from "@/lib/constants";
 import { contactSchema } from "@/lib/validations/contact";
 import { submitContactForm } from "@/app/actions/contact";
 
@@ -153,18 +153,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="email" className={labelClass}>Email (opcjonalnie)</label>
-                <input id="email" name="email" type="email" className={inputClass} placeholder="jan@example.pl" />
-              </div>
-              <div>
-                <label htmlFor="serviceType" className={labelClass}>Rodzaj usługi</label>
-                <select id="serviceType" name="serviceType" className={inputClass}>
-                  <option value="">Wybierz usługę</option>
-                  {SERVICES.map((service) => <option key={service.title} value={service.title}>{service.title}</option>)}
-                </select>
-              </div>
+            <div>
+              <label htmlFor="email" className={labelClass}>Email (opcjonalnie)</label>
+              <input id="email" name="email" type="email" className={inputClass} placeholder="jan@example.pl" />
             </div>
 
             <div>

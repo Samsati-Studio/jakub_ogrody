@@ -32,7 +32,7 @@ export default function TestimonialsMarquee({
         {testimonials.map((t) => (
           <div
             key={t._id}
-            className="flex w-[380px] sm:w-[440px] shrink-0 flex-col rounded-2xl border border-dark/5 bg-white px-6 py-3 shadow-lg shadow-dark/10"
+            className="flex w-[380px] sm:w-[440px] shrink-0 flex-col rounded-2xl border border-dark/5 bg-white px-6 py-3 shadow-[0_4px_32px_rgba(0,0,0,0.07),0_1px_6px_rgba(0,0,0,0.04)]"
           >
             <StarRating rating={t.rating} className="mb-1.5" />
             <blockquote className="mb-2 flex-1 text-sm leading-snug text-slate-600">

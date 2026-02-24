@@ -28,7 +28,7 @@ export function Marquee({
 }: MarqueeProps) {
   return (
     <div
-      className={cn("overflow-hidden", pauseOnHover && "group", className)}
+      className={cn("overflow-x-hidden py-4", pauseOnHover && "group", className)}
       {...props}
     >
       <div
