@@ -15,7 +15,7 @@ export default defineType({
       name: "location",
       title: "Lokalizacja",
       type: "string",
-      description: "Np. Warszawa, Piaseczno",
+      description: "Np. Rawicz, Leszno, Wrocław",
     }),
     defineField({
       name: "quote",
