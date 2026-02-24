@@ -63,7 +63,7 @@ function ServiceCard({ service }: { service: typeof SERVICES[0] }) {
       {/* Toggle */}
       <button
         onClick={() => setOpen(!open)}
-        className="mt-4 flex items-center gap-1 text-sm font-semibold text-accent transition-colors hover:text-accent-dark"
+        className="mt-4 flex min-h-[44px] items-center gap-1 text-sm font-semibold text-accent transition-colors hover:text-accent-dark"
       >
         {open ? "Zwiń" : "Czytaj więcej"}
         <svg
