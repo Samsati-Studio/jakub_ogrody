@@ -41,7 +41,7 @@ export async function submitContactForm(
   try {
     // Send notification to owner
     await resend.emails.send({
-      from: `${COMPANY.shortName} <kontakt@ogrodajakuba.pl>`,
+      from: `${COMPANY.shortName} <kontakt@szymanowiczogrody.pl>`,
       to: COMPANY.email,
       subject: `Nowe zapytanie od ${data.name}`,
       html: `
@@ -60,7 +60,7 @@ export async function submitContactForm(
     // Send autoresponder if email provided
     if (data.email) {
       await resend.emails.send({
-        from: `${COMPANY.shortName} <kontakt@ogrodajakuba.pl>`,
+        from: `${COMPANY.shortName} <kontakt@szymanowiczogrody.pl>`,
         to: data.email,
         subject: `Dziękujemy za kontakt — ${COMPANY.shortName}`,
         html: `

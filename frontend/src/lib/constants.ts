@@ -3,7 +3,7 @@ export const COMPANY = {
   shortName: "Ogrody Jakuba",
   owner: "Jakub Szymanowicz",
   phone: "+48 607 871 019",
-  email: "kontakt@ogrodajakuba.pl",
+  email: "kontakt@szymanowiczogrody.pl",
   address: "Rawicz, Leszno i Wrocław",
   areas: [
     "Rawicz",
@@ -16,7 +16,7 @@ export const COMPANY = {
   ],
   description:
     "Profesjonalne usługi ogrodnicze na terenie Rawicza, Leszna, Wrocławia i okolic. Projektujemy, zakładamy i dbamy o Twoją zieleń.",
-  url: "https://ogrodajakuba.pl",
+  url: "https://szymanowiczogrody.pl",
 };
 
 export const NAV_LINKS = [

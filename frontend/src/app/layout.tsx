@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://szymanowiczogrody.pl"),
   title: {
     default: `${COMPANY.shortName} — Usługi Ogrodnicze Rawicz`,
     template: `%s | ${COMPANY.shortName}`,
