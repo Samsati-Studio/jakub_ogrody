@@ -3,10 +3,13 @@
 @keyframes shadow-pulse {
   0% {
     box-shadow: 0 0 0 0px var(--pulse-color);
+    opacity: 0;
+  }
+  15% {
+    box-shadow: 0 0 0 0px var(--pulse-color);
     opacity: 0.8;
   }
   100% {
-    /* To 15px sprawia, że poświata rośnie równo o 15 pikseli z każdej strony */
     box-shadow: 0 0 0 15px var(--pulse-color);
     opacity: 0;
   }
