@@ -134,7 +134,7 @@ export default function Contact() {
         <AnimateOnScroll delay={0.2} className="w-full">
           <form onSubmit={handleSubmit} className="w-full space-y-4 rounded-3xl bg-white p-8 shadow-2xl border border-dark/5 border-t-4 border-t-accent lg:p-10">
             <div className="mb-2">
-              <h3 className="text-2xl font-bold text-dark">Darmowa wycena</h3>
+              <h3 className="text-2xl font-bold text-dark">Skonsultuj swoją wizję</h3>
               <p className="text-sm text-dark/60">Zostaw dane, odezwiemy się w ciągu 24h.</p>
             </div>
             {serverError && <div className="rounded-lg bg-red-50 p-4 text-sm text-red-700">{serverError}</div>}
@@ -169,7 +169,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="w-full rounded-full bg-accent px-8 py-4 font-semibold text-white transition-all hover:bg-accent-dark disabled:opacity-50"
             >
-              {isSubmitting ? "Wysyłanie..." : "Odbierz darmową wycenę"}
+              {isSubmitting ? "Wysyłanie..." : "Umów bezpłatną konsultację"}
             </button>
           </form>
         </AnimateOnScroll>
