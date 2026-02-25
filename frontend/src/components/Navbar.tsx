@@ -33,7 +33,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-colors",
-        isMobileOpen ? "duration-0" : "duration-300",
+        isMobileOpen ? "duration-0" : "duration-0",
         (isScrolled || isMobileOpen) ? "bg-white shadow-sm" : "bg-transparent"
        )}
     >

@@ -42,13 +42,13 @@ export default function GalleryModal({ item, onClose }: GalleryModalProps) {
       onClick={onClose}
     >
       <div
-        className="relative flex max-h-[95vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-white/40 bg-white/20 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-xl"
+        className="relative flex max-h-[95vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-white/40 bg-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-md"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/50 text-dark shadow backdrop-blur-sm transition-colors hover:bg-white/80"
+          className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/10 text-dark shadow backdrop-blur-sm transition-colors hover:bg-white/80"
           aria-label="Zamknij"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -3,7 +3,7 @@ export const COMPANY = {
   shortName: "Ogrody Jakuba",
   owner: "Jakub Szymanowicz",
   phone: "+48 607 871 019",
-  email: "ogrodnictwo.jszymanowicz@gmail.com",
+  email: "kontakt@szymanowiczogrody.pl",
   address: "Rawicz, Leszno i Wrocław",
   areas: [
     "Rawicz",
@@ -16,7 +16,7 @@ export const COMPANY = {
   ],
   description:
     "Profesjonalne usługi ogrodnicze na terenie Rawicza, Leszna, Wrocławia i okolic. Projektujemy, zakładamy i dbamy o Twoją zieleń.",
-  url: "https://szymanowiczogrody.pl",
+  url: "https://ogrodajakuba.pl",
 };
 
 export const NAV_LINKS = [
@@ -47,7 +47,7 @@ export const SERVICES = [
     icon: "care",
   },
   {
-    title: "Systemy Nawadniania",
+    title: "Systemy Nawadnianie",
     description:
       "Zapomnij o ręcznym podlewaniu. Projektujemy i montujemy w pełni automatyczne systemy marek Rain Bird oraz Hunter, które dbają o Twój ogród za Ciebie. Zapewniamy pełny serwis, programowanie i przygotowanie instalacji do sezonu zimowego.",
     icon: "water",
@@ -122,15 +122,16 @@ export const WHY_US = [
     icon: "experience",
   },
   {
-    title: "Terminowość",
-    description:
-      "Dotrzymujemy ustalonych terminów. Każdy projekt realizujemy zgodnie z harmonogramem, bez zbędnych opóźnień.",
-    icon: "clock",
-  },
-  {
     title: "Jakość",
     description:
       "Używamy wyłącznie najwyższej jakości materiałów i roślin. Dbamy o każdy detal, aby efekt końcowy przekroczył oczekiwania.",
     icon: "quality",
   },
+  {
+    title: "Terminowość",
+    description:
+      "Dotrzymujemy ustalonych terminów. Każdy projekt realizujemy zgodnie z harmonogramem, bez zbędnych opóźnień.",
+    icon: "clock",
+  },
+
 ];
