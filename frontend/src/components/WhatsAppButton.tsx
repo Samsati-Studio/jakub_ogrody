@@ -1,7 +1,7 @@
 "use client";
 
 const WA_URL =
-  "https://wa.me/48607871019?text=Cze%C5%9B%C4%87%20Kuba%2C%20chcia%C5%82em%20zapyta%C4%87%20o%20wycen%C4%99%20ogrodu.";
+  "https://wa.me/48607871019?text=Dzie%C5%84%20dobry!%20Ch%C4%99tnie%20poznam%20szczeg%C3%B3%C5%82y%20oferty%20i%20kosztorys%20prac%20w%20moim%20ogrodzie.%0A%0A%F0%9F%93%8D%20Miejscowo%C5%9B%C4%87%3A%0A%0ACh%C4%99tnie%20skontaktuj%C4%99%20si%C4%99%20telefonicznie%20w%20celu%20om%C3%B3wienia%20szczeg%C3%B3%C5%82%C3%B3w%20realizacji.%20B%C4%99d%C4%99%20pod%20telefonem!";
 
 export default function WhatsAppButton() {
   return (
