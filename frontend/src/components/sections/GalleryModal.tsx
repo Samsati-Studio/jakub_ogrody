@@ -16,11 +16,12 @@ interface GalleryModalProps {
 }
 
 export default function GalleryModal({ item, onClose }: GalleryModalProps) {
-  const images = item.images ?? [];
+  const images = [
+    ...(item.poImages ?? []).map((src) => ({ src, stage: "po" as const })),
+    ...(item.przedImages ?? []).map((src) => ({ src, stage: "przed" as const })),
+  ];
 
-  const defaultMain =
-    images.find((img) => img.stage === "po")?.src ??
-    getImageSrc(item.mainImage, 1200, 750);
+  const defaultMain = item.poImages?.[0] ?? getImageSrc(item.mainImage, 1200, 750);
 
   const [mainSrc, setMainSrc] = useState(defaultMain);
 

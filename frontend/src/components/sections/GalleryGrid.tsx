@@ -69,7 +69,7 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
       {/* Image grid */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {filteredItems.map((item, index) => {
-          const przedSrc = item.images?.find((img) => img.stage === "przed")?.src;
+          const przedSrc = item.przedImages?.[0];
 
           return (
             <AnimateOnScroll key={item._id} delay={index * 0.05}>
