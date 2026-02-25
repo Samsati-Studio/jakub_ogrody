@@ -52,7 +52,7 @@ export default function Process() {
                 <div className="absolute left-[calc(55%+2rem)] top-7 h-0.5 w-[calc(100%-4rem)] bg-primary/20" />
               )}
               <h3 className="mb-2 text-lg font-bold text-dark">{step.title}</h3>
-              <p className="text-sm text-dark/70">{step.description}</p>
+              <p className="text-sm text-dark/70 text-left">{step.description}</p>
             </div>
           </AnimateOnScroll>
         ))}
