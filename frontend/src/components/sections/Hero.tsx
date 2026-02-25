@@ -1,24 +1,38 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { COMPANY } from "@/lib/constants";
 
 export default function Hero() {
   return (
     <section id="hero" className="relative flex min-h-screen items-center">
-      {/* Video background */}
+      {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Mobile: static image (video autoplay blocked by browsers on mobile) */}
+        <div className="absolute inset-0 sm:hidden">
+          <Image
+            src="/persona.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        {/* Desktop: video */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          poster="persona.jpg"
-          className="h-full w-full object-cover"
+          poster="/persona.jpg"
+          className="hidden h-full w-full object-cover sm:block"
         >
           <source src="/jakub_garden.mp4" type="video/mp4" />
         </video>
+
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
