@@ -45,6 +45,10 @@ export const metadata: Metadata = {
       },
     ],
   },
+  icons: {
+    icon: [{ url: "/logotyp_szymanowiczogrody.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/logotyp_szymanowiczogrody.svg" }],
+  },
   robots: {
     index: true,
     follow: true,
