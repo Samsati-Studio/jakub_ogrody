@@ -83,7 +83,7 @@ export default function Contact() {
   const errorClass = "mt-1 text-sm text-red-600";
 
   return (
-    <Section id="kontakt" className="scroll-mt-24 lg:py-16">
+    <Section id="kontakt" className="scroll-mt-12 lg:py-16">
       <SectionHeading subtitle="Wypełnij formularz, a odezwiemy się do Ciebie w ciągu 24 godzin. Możesz też zadzwonić bezpośrednio.">
         Kontakt
       </SectionHeading>

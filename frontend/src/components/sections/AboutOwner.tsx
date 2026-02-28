@@ -6,7 +6,7 @@ import { COMPANY } from "@/lib/constants";
 
 export default function AboutOwner() {
   return (
-    <Section id="o-nas" className="!py-12 md:!py-12">
+    <Section id="o-nas" className="scroll-mt-16 md:scroll-mt-20 !py-12 md:!py-12">
       <SectionHeading>O nas</SectionHeading>
 
       <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-5">
