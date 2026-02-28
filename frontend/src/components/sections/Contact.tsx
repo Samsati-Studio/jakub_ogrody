@@ -46,7 +46,6 @@ export default function Contact() {
       name: formData.get("name") as string,
       phone: formData.get("phone") as string,
       email: formData.get("email") as string,
-      serviceType: formData.get("serviceType") as string,
       message: formData.get("message") as string,
     };
 

@@ -50,7 +50,7 @@ export default function Hero() {
             <span className="text-accent">które zachwycają</span>
           </h1>
           <p className="items-center text-center mx-auto 
-          mt-6 max-w-xl text-lm text-white/80 md:text-xl">
+          mt-6 max-w-xl text-lg text-white/80 md:text-xl">
             {COMPANY.description}
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-8 sm:flex-row">
