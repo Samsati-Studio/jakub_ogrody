@@ -7,36 +7,34 @@ import { COMPANY } from "@/lib/constants";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-dvh items-center isolate">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Mobile: static image (video autoplay blocked by browsers on mobile) */}
-          <div className="absolute inset-0 sm:hidden">
-            <Image
-              src="/mariakray-garden-6803861_1920.jpg"
-              alt=""
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* Desktop: video */}
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/mariakray-garden-6803861_1920.jpg"
-            className="hidden h-full w-full object-cover sm:block"
-          >
-            <source src="/jakub_garden.mp4" type="video/mp4" />
-          </video>
+    <section id="hero" className="relative flex min-h-dvh items-center overflow-hidden">
+      {/* Background — single GPU-composited layer */}
+      <div className="absolute inset-0 [transform:translateZ(0)]">
+        {/* Mobile: static image */}
+        <div className="absolute inset-0 sm:hidden">
+          <Image
+            src="/mariakray-garden-6803861_1920.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
 
-        {/* Gradient — GPU composited to prevent scroll repaint glitch */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 will-change-transform" />
+        {/* Desktop: video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/mariakray-garden-6803861_1920.jpg"
+          className="hidden h-full w-full object-cover sm:block"
+        >
+          <source src="/jakub_garden.mp4" type="video/mp4" />
+        </video>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
       {/* Content */}
