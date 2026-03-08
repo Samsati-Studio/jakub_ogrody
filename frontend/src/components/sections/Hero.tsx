@@ -7,7 +7,7 @@ import { COMPANY } from "@/lib/constants";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-screen items-center">
+    <section id="hero" className="relative flex min-h-dvh items-center isolate">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 overflow-hidden">
@@ -35,8 +35,8 @@ export default function Hero() {
           </video>
         </div>
 
-        {/* Gradient outside overflow-hidden to avoid scroll compositing glitch */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        {/* Gradient — GPU composited to prevent scroll repaint glitch */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 will-change-transform" />
       </div>
 
       {/* Content */}
