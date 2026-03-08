@@ -15,7 +15,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster="/mariakray-garden-6803861_1920.jpg"
+          poster="/hero_poster.jpg"
           className="absolute inset-0 h-full w-full object-cover sm:hidden"
         >
           <source src="/jakub_garden_mobile.mp4" type="video/mp4" />
@@ -27,7 +27,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          poster="/mariakray-garden-6803861_1920.jpg"
+          poster="/hero_poster.jpg"
           className="hidden h-full w-full object-cover sm:block"
         >
           <source src="/jakub_garden.mp4" type="video/mp4" />
