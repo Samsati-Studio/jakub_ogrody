@@ -20,20 +20,16 @@ export default function AboutOwner() {
             </p>
             <div className="space-y-4 text-dark/80">
               <p>
-                Cześć! Jestem Jakub i od lat tworzę piękne ogrody na terenie
-                Rawicza, Leszna i Wrocławia. Moja pasja do zieleni i architektury
-                krajobrazu pozwala mi realizować projekty, które nie tylko cieszą
-                oko, ale też służą przez lata.
+                Usługi Ogrodnicze Jakub Szymanowicz to połączenie pasji do
+                zieleni z profesjonalnym podejściem do każdego zlecenia. Od 2019
+                roku pomagamy tworzyć i pielęgnować ogrody, które są nie tylko
+                estetyczne, ale również praktyczne i trwałe.
               </p>
               <p>
-                Każdy ogród traktuję indywidualnie — wsłuchuję się w potrzeby
-                klientów i dostosowuję projekt do charakteru miejsca. Wierzę, że
-                dobrze zaprojektowany ogród to inwestycja, która z roku na rok
-                zyskuje na wartości.
-              </p>
-              <p>
-                Zapraszam do kontaktu — chętnie porozmawiam o Twoim wymarzonym
-                ogrodzie i pomogę go stworzyć.
+                Każdy projekt traktujemy indywidualnie — doradzamy, planujemy i
+                realizujemy prace z dbałością o najmniejsze detale. Terminowość,
+                uczciwość i wysoka jakość to wartości, na których budujemy
+                zaufanie naszych klientów.
               </p>
             </div>
             <p className="mt-8 text-lg italic text-dark/70">
