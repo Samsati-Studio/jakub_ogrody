@@ -26,7 +26,7 @@ export default function JsonLd() {
       "Oświetlenie ogrodowe",
     ],
     priceRange: "$$",
-    image: `${COMPANY.url}/mariakray-gardening-6803874_1920.jpg`,
+    image: `${COMPANY.url}/og_image.jpg`,
   };
 
   return (

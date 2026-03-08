@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/mariakray-gardening-6803874_1920.jpg",
+        url: "/og_image.jpg",
         width: 1920,
-        height: 1280,
+        height: 1080,
         alt: COMPANY.shortName,
       },
     ],
