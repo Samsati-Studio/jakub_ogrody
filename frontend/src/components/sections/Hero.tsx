@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Button from "@/components/ui/Button";
 import { COMPANY } from "@/lib/constants";
 
@@ -10,16 +9,17 @@ export default function Hero() {
     <section id="hero" className="relative flex min-h-dvh items-center overflow-hidden">
       {/* Background — single GPU-composited layer */}
       <div className="absolute inset-0 [transform:translateZ(0)]">
-        {/* Mobile: static image */}
-        <div className="absolute inset-0 sm:hidden">
-          <Image
-            src="/mariakray-garden-6803861_1920.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+        {/* Mobile: video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/mariakray-garden-6803861_1920.jpg"
+          className="absolute inset-0 h-full w-full object-cover sm:hidden"
+        >
+          <source src="/jakub_garden_mobile.mp4" type="video/mp4" />
+        </video>
 
         {/* Desktop: video */}
         <video
