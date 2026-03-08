@@ -13,10 +13,10 @@ export async function submitContactForm(
   const raw = {
     name: formData.get("name"),
     phone: formData.get("phone"),
-    email: formData.get("email"),
-    location: formData.get("location"),
-    propertySize: formData.get("propertySize"),
-    serviceType: formData.get("serviceType"),
+    email: formData.get("email") ?? undefined,
+    location: formData.get("location") ?? undefined,
+    propertySize: formData.get("propertySize") ?? undefined,
+    serviceType: formData.get("serviceType") ?? undefined,
     message: formData.get("message"),
   };
 

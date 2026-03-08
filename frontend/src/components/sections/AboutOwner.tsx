@@ -45,7 +45,7 @@ export default function AboutOwner() {
         <AnimateOnScroll delay={0.2} className="w-full md:col-span-2">
           <div className="relative mx-auto aspect-[3/4] max-h-[500px] max-w-sm overflow-hidden rounded-3xl md:max-w-none">
             <Image
-              src="/persona.jpg"
+              src="/Jakub_Szymanowicz.jpeg"
               alt={COMPANY.owner}
               fill
               className="object-cover"
