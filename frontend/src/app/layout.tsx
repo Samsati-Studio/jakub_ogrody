@@ -25,8 +25,23 @@ export const metadata: Metadata = {
     "pielęgnacja ogrodów",
     "ogrodnik Rawicz",
     "ogrodnik Leszno",
+    "ogrodnik Wrocław",
+    "ogrody Rawicz",
+    "ogrody Leszno",
     "ogrody Wrocław",
+    "zakładanie ogrodów Rawicz",
+    "zakładanie ogrodów Leszno",
+    "zakładanie ogrodów Wrocław",
+    "projektowanie ogrodów Rawicz",
+    "projektowanie ogrodów Leszno",
+    "projektowanie ogrodów Wrocław",
+    "pielęgnacja ogrodu Rawicz",
+    "nawadnianie ogrodów",
+    "systemy nawadniania ogrodów",
+    "trawnik z rolki",
     "architekt krajobrazu",
+    "Szymanowicz Ogrody",
+    "Jakub Szymanowicz ogrodnik",
   ],
   authors: [{ name: COMPANY.owner }],
   openGraph: {
@@ -51,6 +66,42 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LandscapeService",
+  "name": COMPANY.name,
+  "description": COMPANY.description,
+  "image": `${COMPANY.url}/og_image.jpg`,
+  "@id": COMPANY.url,
+  "url": COMPANY.url,
+  "telephone": COMPANY.phone,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rawicz",
+    "postalCode": "63-900",
+    "addressCountry": "PL",
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.608,
+    "longitude": 16.858,
+  },
+  "areaServed": COMPANY.areas.map((city) => ({
+    "@type": "City",
+    "name": city,
+  })),
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "07:00",
+    "closes": "18:00",
+  },
+  "priceRange": "zł zł",
+  "sameAs": [
+    "https://www.facebook.com/p/Us%C5%82ugi-Ogrodnicze-Jakub-Szymanowicz-100054396765237/",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -59,6 +110,10 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className={`${inter.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main className="bg-white">{children}</main>
         <Footer />
