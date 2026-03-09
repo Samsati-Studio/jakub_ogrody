@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://szymanowiczogrody.pl"),
   title: {
-    default: `${COMPANY.shortName} — Usługi Ogrodnicze Rawicz`,
+    default: `${COMPANY.shortName} — Usługi Ogrodnicze | Rawicz, Leszno, Wrocław`,
     template: `%s | ${COMPANY.shortName}`,
   },
   description: COMPANY.description,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: COMPANY.owner }],
   openGraph: {
-    title: `${COMPANY.shortName} — Usługi Ogrodnicze Rawicz`,
+    title: `${COMPANY.shortName} — Usługi Ogrodnicze | Rawicz, Leszno, Wrocław`,
     description: COMPANY.description,
     url: COMPANY.url,
     siteName: COMPANY.shortName,

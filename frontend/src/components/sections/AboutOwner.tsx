@@ -15,21 +15,21 @@ export default function AboutOwner() {
             <h3 className="mb-2 text-center text-3xl font-bold text-dark md:text-left">
               {COMPANY.owner}
             </h3>
-            <p className="mb-6 text-center text-lg font-medium text-accent md:text-left">
-              Założyciel & Główny Projektant
-            </p>
             <div className="space-y-4 text-dark/80">
+              <p>
+                Cześć, jestem Jakub! Od kilku lat wspólnie z moim zespołem
+                tworzymy ogrody, które stają się ulubionym miejscem naszych
+                klientów w Rawiczu, Lesznie i Wrocławiu.
+              </p>
               <p>
                 Usługi Ogrodnicze Jakub Szymanowicz to połączenie pasji do
                 zieleni z profesjonalnym podejściem do każdego zlecenia. Od 2019
                 roku pomagamy tworzyć i pielęgnować ogrody, które są nie tylko
-                estetyczne, ale również praktyczne i trwałe.
-              </p>
-              <p>
-                Każdy projekt traktujemy indywidualnie — doradzamy, planujemy i
-                realizujemy prace z dbałością o najmniejsze detale. Terminowość,
-                uczciwość i wysoka jakość to wartości, na których budujemy
-                zaufanie naszych klientów.
+                estetyczne, ale również praktyczne i trwałe. Każdy projekt
+                traktujemy indywidualnie — doradzamy, planujemy i realizujemy
+                prace z dbałością o najmniejsze detale. Terminowość, uczciwość i
+                wysoka jakość to wartości, na których budujemy zaufanie naszych
+                klientów.
               </p>
             </div>
             <p className="mt-8 text-lg italic text-dark/70">
