@@ -1,16 +1,29 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import { COMPANY } from "@/lib/constants";
 
 export default function Hero() {
+  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+  const desktopVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    [mobileVideoRef, desktopVideoRef].forEach((ref) => {
+      if (ref.current) {
+        ref.current.play().catch(() => {});
+      }
+    });
+  }, []);
+
   return (
     <section id="hero" className="relative flex min-h-dvh items-center bg-black [will-change:transform]">
       {/* Background */}
       <div className="absolute inset-0">
         {/* Mobile: video */}
         <video
+          ref={mobileVideoRef}
           autoPlay
           muted
           loop
@@ -23,6 +36,7 @@ export default function Hero() {
 
         {/* Desktop: video */}
         <video
+          ref={desktopVideoRef}
           autoPlay
           muted
           loop
