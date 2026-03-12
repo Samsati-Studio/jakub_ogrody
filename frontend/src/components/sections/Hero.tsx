@@ -6,9 +6,9 @@ import { COMPANY } from "@/lib/constants";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex min-h-dvh items-center overflow-hidden">
-      {/* Background — single GPU-composited layer */}
-      <div className="absolute inset-0 [transform:translateZ(0)]">
+    <section id="hero" className="relative flex min-h-dvh items-center bg-black [will-change:transform]">
+      {/* Background */}
+      <div className="absolute inset-0">
         {/* Mobile: video */}
         <video
           autoPlay
@@ -16,7 +16,7 @@ export default function Hero() {
           loop
           playsInline
           poster="/hero_poster.jpg"
-          className="absolute inset-0 h-full w-full object-cover sm:hidden"
+          className="absolute inset-0 h-full w-full object-cover sm:hidden [transform:translate3d(0,0,0)] [backface-visibility:hidden]"
         >
           <source src="/jakub_garden_mobile.mp4" type="video/mp4" />
         </video>
@@ -28,7 +28,7 @@ export default function Hero() {
           loop
           playsInline
           poster="/hero_poster.jpg"
-          className="hidden h-full w-full object-cover sm:block"
+          className="hidden h-full w-full object-cover sm:block [transform:translate3d(0,0,0)] [backface-visibility:hidden]"
         >
           <source src="/jakub_garden.mp4" type="video/mp4" />
         </video>
