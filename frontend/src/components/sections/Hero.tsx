@@ -10,11 +10,22 @@ export default function Hero() {
   const desktopVideoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    [mobileVideoRef, desktopVideoRef].forEach((ref) => {
-      if (ref.current) {
-        ref.current.play().catch(() => {});
-      }
-    });
+    const videos = [mobileVideoRef, desktopVideoRef]
+      .map((ref) => ref.current)
+      .filter(Boolean) as HTMLVideoElement[];
+
+    const tryPlay = (video: HTMLVideoElement) => {
+      video.play().catch(() => {
+        // Autoplay blocked — retry on first user interaction
+        const handleInteraction = () => {
+          video.play().catch(() => {});
+        };
+        document.addEventListener("touchstart", handleInteraction, { once: true });
+        document.addEventListener("click", handleInteraction, { once: true });
+      });
+    };
+
+    videos.forEach(tryPlay);
   }, []);
 
   return (
