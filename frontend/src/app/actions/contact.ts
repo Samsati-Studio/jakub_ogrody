@@ -41,7 +41,7 @@ export async function submitContactForm(
   try {
     // Send notification to owner
     await resend.emails.send({
-      from: `${COMPANY.shortName} <kontakt@szymanowiczogrody.pl>`,
+      from: `${COMPANY.shortName} <kontakt@ogrodyszymanowicz.pl>`,
       to: COMPANY.email,
       subject: `Nowe zapytanie od ${data.name}`,
       html: `
@@ -60,7 +60,7 @@ export async function submitContactForm(
     // Send autoresponder if email provided
     if (data.email) {
       await resend.emails.send({
-        from: `${COMPANY.shortName} <kontakt@szymanowiczogrody.pl>`,
+        from: `${COMPANY.shortName} <kontakt@ogrodyszymanowicz.pl>`,
         to: data.email,
         subject: `Dziękujemy za kontakt — ${COMPANY.shortName}`,
         html: `
@@ -78,7 +78,8 @@ export async function submitContactForm(
       success: true,
       message: "Dziękujemy! Twoja wiadomość została wysłana.",
     };
-  } catch {
+  } catch (error) {
+    console.error("Resend error:", error);
     return {
       success: false,
       message: "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.",
