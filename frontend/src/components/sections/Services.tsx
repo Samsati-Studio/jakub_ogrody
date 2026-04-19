@@ -15,11 +15,11 @@ function ServiceCard({ service }: { service: typeof SERVICES[0] }) {
         alt={service.title}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        className="object-cover transition-transform duration-700 group-hover:scale-105"
+        className="object-cover transition-transform duration-700 [@media(hover:hover)]:group-hover:scale-105"
       />
 
-      {/* Overlay — ciemnieje na hover */}
-      <div className="absolute inset-0 bg-black/45 transition-colors duration-400 group-hover:bg-black/65" />
+      {/* Overlay — na mobile zawsze ciemne, na desktop rozjaśnia się i ciemnieje na hover */}
+      <div className="absolute inset-0 bg-black/60 transition-colors duration-400 [@media(hover:hover)]:bg-black/45 [@media(hover:hover)]:group-hover:bg-black/65" />
 
       {/* Content */}
       <div className="absolute inset-0 flex flex-col p-6 sm:p-8">
@@ -29,19 +29,19 @@ function ServiceCard({ service }: { service: typeof SERVICES[0] }) {
         </h3>
 
         {/* Separator */}
-        <div className="mt-3 h-px w-10 bg-white/40 transition-all duration-400 group-hover:w-16 group-hover:bg-white/70" />
+        <div className="mt-3 h-px w-16 bg-white/70 transition-all duration-400 [@media(hover:hover)]:w-10 [@media(hover:hover)]:bg-white/40 [@media(hover:hover)]:group-hover:w-16 [@media(hover:hover)]:group-hover:bg-white/70" />
 
-        {/* Opis — pojawia się na hover */}
-        <p className="mt-3 text-sm leading-relaxed text-white/0 transition-all duration-400 group-hover:text-white/90 line-clamp-2">
+        {/* Opis — na mobile zawsze widoczny, na desktop pojawia się na hover */}
+        <p className="mt-3 text-sm leading-relaxed text-white/90 transition-all duration-400 [@media(hover:hover)]:text-white/0 [@media(hover:hover)]:group-hover:text-white/90 line-clamp-2">
           {service.description}
         </p>
 
-        {/* Bullets — zawsze widoczne, jaśnieją na hover */}
+        {/* Bullets */}
         <ul className="mt-auto space-y-2">
           {service.bullets.map((bullet) => (
-            <li key={bullet} className="flex items-start gap-2.5 text-sm text-white/90 transition-colors duration-400 group-hover:text-white">
+            <li key={bullet} className="flex items-start gap-2.5 text-sm text-white transition-colors duration-400 [@media(hover:hover)]:text-white/90 [@media(hover:hover)]:group-hover:text-white">
               <svg
-                className="mt-0.5 h-4 w-4 shrink-0 text-white/50 transition-colors duration-400 group-hover:text-accent"
+                className="mt-0.5 h-4 w-4 shrink-0 text-accent transition-colors duration-400 [@media(hover:hover)]:text-white/50 [@media(hover:hover)]:group-hover:text-accent"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
