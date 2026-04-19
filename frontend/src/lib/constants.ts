@@ -31,26 +31,80 @@ export const SERVICES = [
   {
     title: "Indywidualne Projekty",
     description:
-      "Tworzymy unikalne koncepcje dopasowane do architektury Twojego domu i stylu życia. Przygotujemy dla Ciebie profesjonalny dobór roślin oraz realistyczne wizualizacje 3D, dzięki którym zobaczysz swój przyszły ogród, zanim jeszcze powstanie.",
+      "Unikalna koncepcja dopasowana do architektury Twojego domu i stylu życia — zanim ruszymy z łopatą, zobaczysz swój ogród w realistycznej wizualizacji.",
+    bullets: [
+      "Projekt koncepcyjny z doborem roślin",
+      "Wizualizacje 3D przyszłego ogrodu",
+      "Kosztorys inwestorski bez ukrytych opłat",
+      "Konsultacja na działce gratis",
+    ],
     icon: "design",
+    image: "/projects/1/Po (2).jpg",
   },
   {
     title: "Budowa Ogrodów",
     description:
-      "Tworzymy ogrody, które zostają na pokolenia. Zajmujemy się wszystkim: od precyzyjnej niwelacji terenu i drenażu, przez profesjonalne nasadzenia, aż po układanie trawników z rolki lub siew trawy. Oddajemy Ci gotową, zieloną przestrzeń.",
+      "Od pustej działki do gotowego, zielonego ogrodu — kompleksowo i sprawnie. Zajmujemy się każdym etapem realizacji.",
+    bullets: [
+      "Niwelacja terenu i drenaż",
+      "Trawnik z rolki lub siew trawy",
+      "Nasadzenia drzew, krzewów i bylin",
+      "Ściółkowanie i przygotowanie gleby",
+    ],
     icon: "plant",
+    image: "/projects/3/Po (3).jpg",
   },
   {
     title: "Pielęgnacja i Serwis",
     description:
-      "Twój ogród w najlepszych rękach przez cały rok. Oferujemy profesjonalną wertykulację trawnika, cięcie drzewek owocowych, formowanie żywopłotów oraz ochronę roślin przed szkodnikami. Dbamy o detale, byś Ty mógł cieszyć się wyłącznie wypoczynkiem.",
+      "Twój ogród w najlepszych rękach przez cały rok — bez Twojego zaangażowania. Dbamy o detale, byś cieszył się wyłącznie wypoczynkiem.",
+    bullets: [
+      "Wertykulacja i aeracja trawnika",
+      "Cięcie drzew owocowych i krzewów",
+      "Formowanie i strzyżenie żywopłotów",
+      "Ochrona roślin przed szkodnikami",
+    ],
     icon: "care",
+    image: "/projects/5/Po (2).jpg",
   },
   {
     title: "Systemy Nawadniania",
     description:
-      "Zapomnij o ręcznym podlewaniu. Projektujemy i montujemy w pełni automatyczne systemy marek Rain Bird oraz Hunter, które dbają o Twój ogród za Ciebie. Zapewniamy pełny serwis, programowanie i przygotowanie instalacji do sezonu zimowego.",
+      "Zapomnij o ręcznym podlewaniu. Automatyczny system dba o ogród za Ciebie — nawet gdy jesteś na urlopie.",
+    bullets: [
+      "Systemy Rain Bird i Hunter",
+      "Projekt i montaż instalacji",
+      "Programowanie i uruchomienie",
+      "Zimowanie i serwis sezonowy",
+    ],
     icon: "water",
+    image: "/projects/2/Po (1).jpg",
+  },
+  {
+    title: "Oświetlenie Ogrodowe",
+    description:
+      "Ogród piękny nie tylko w dzień. Profesjonalne oświetlenie podkreśla charakter roślin i wydłuża czas korzystania z tarasu.",
+    bullets: [
+      "Projekt rozmieszczenia punktów świetlnych",
+      "Oświetlenie LED ścieżek i roślin",
+      "Sterowanie strefami i harmonogramem",
+      "Montaż instalacji niskonapięciowej",
+    ],
+    icon: "light",
+    image: "/projects/7/Po (1).jpg",
+  },
+  {
+    title: "Nawierzchnie i Ścieżki",
+    description:
+      "Kostka, grys, drewno kompozytowe — doradzimy i ułożymy nawierzchnię, która wytrzyma lata bez opadania i przebarwień.",
+    bullets: [
+      "Ścieżki, podjazdy i tarasy",
+      "Kostka brukowa i płyty betonowe",
+      "Drewno kompozytowe i grys",
+      "Obrzeża i elementy małej architektury",
+    ],
+    icon: "path",
+    image: "/projects/4/Po (1).jpg",
   },
 ];
 

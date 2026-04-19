@@ -46,7 +46,7 @@ export default function Navbar() {
               width={160}
               height={42}
               priority
-              className={`h-9 w-auto transition-all duration-300 md:h-11 ${
+              className={`h-8 w-auto transition-all duration-300 md:h-10 ${
                 (isMobileOpen || isScrolled) ? "" : "brightness-0 invert"
               }`}
             />

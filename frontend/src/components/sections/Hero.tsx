@@ -14,18 +14,31 @@ export default function Hero() {
       .map((ref) => ref.current)
       .filter(Boolean) as HTMLVideoElement[];
 
-    const tryPlay = (video: HTMLVideoElement) => {
-      video.play().catch(() => {
-        // Autoplay blocked — retry on first user interaction
-        const handleInteraction = () => {
-          video.play().catch(() => {});
-        };
-        document.addEventListener("touchstart", handleInteraction, { once: true });
-        document.addEventListener("click", handleInteraction, { once: true });
-      });
+    const playVideo = (video: HTMLVideoElement) => {
+      if (video.paused) video.play().catch(() => {});
     };
+    const tryPlayAll = () => videos.forEach(playVideo);
 
-    videos.forEach(tryPlay);
+    tryPlayAll();
+
+    // iOS Safari: retry when video has buffered enough
+    videos.forEach((video) => {
+      video.addEventListener("canplay", () => playVideo(video));
+    });
+
+    // iOS Safari: retry on first touch/click
+    document.addEventListener("touchstart", tryPlayAll, { once: true });
+    document.addEventListener("click", tryPlayAll, { once: true });
+
+    // Retry when user returns to the tab
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible") tryPlayAll();
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
   }, []);
 
   return (
