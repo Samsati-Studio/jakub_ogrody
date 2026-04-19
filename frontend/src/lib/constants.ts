@@ -29,79 +29,61 @@ export const NAV_LINKS = [
 
 export const SERVICES = [
   {
-    title: "Indywidualne Projekty",
+    title: "Projektowanie i Zakładanie Ogrodów",
     description:
-      "Unikalna koncepcja dopasowana do architektury Twojego domu i stylu życia — zanim ruszymy z łopatą, zobaczysz swój ogród w realistycznej wizualizacji.",
+      "Tworzymy przydomowe przestrzenie od podstaw — od koncepcji po finalną realizację, dopasowane do ukształtowania terenu i architektury budynku.",
     bullets: [
-      "Projekt koncepcyjny z doborem roślin",
-      "Wizualizacje 3D przyszłego ogrodu",
-      "Kosztorys inwestorski bez ukrytych opłat",
-      "Konsultacja na działce gratis",
+      "Projekty koncepcyjne i wykonawcze",
+      "Niwelacja terenu, drenaże i odwodnienia",
+      "Nasadzenia drzew, krzewów i żywopłotów",
     ],
     icon: "design",
     image: "/projects/1/Po (2).jpg",
   },
   {
-    title: "Budowa Ogrodów",
+    title: "Trawniki Premium",
     description:
-      "Od pustej działki do gotowego, zielonego ogrodu — kompleksowo i sprawnie. Zajmujemy się każdym etapem realizacji.",
+      "Specjalizujemy się w tworzeniu idealnie zielonych nawierzchni, które są wizytówką każdego ogrodu.",
     bullets: [
-      "Niwelacja terenu i drenaż",
-      "Trawnik z rolki lub siew trawy",
-      "Nasadzenia drzew, krzewów i bylin",
-      "Ściółkowanie i przygotowanie gleby",
+      "Trawnik z rolki — natychmiastowy efekt",
+      "Trawnik z siewu z wyselekcjonowanych mieszanek",
+      "Siatki przeciw kretom pod murawę",
     ],
     icon: "plant",
     image: "/projects/3/Po (3).jpg",
   },
   {
-    title: "Pielęgnacja i Serwis",
+    title: "Inteligentne Systemy Nawadniania",
     description:
-      "Twój ogród w najlepszych rękach przez cały rok — bez Twojego zaangażowania. Dbamy o detale, byś cieszył się wyłącznie wypoczynkiem.",
+      "Projektujemy i instalujemy automatykę, która dba o ogród za Ciebie — nawet gdy jesteś na urlopie.",
     bullets: [
-      "Wertykulacja i aeracja trawnika",
-      "Cięcie drzew owocowych i krzewów",
-      "Formowanie i strzyżenie żywopłotów",
-      "Ochrona roślin przed szkodnikami",
-    ],
-    icon: "care",
-    image: "/projects/5/Po (2).jpg",
-  },
-  {
-    title: "Systemy Nawadniania",
-    description:
-      "Zapomnij o ręcznym podlewaniu. Automatyczny system dba o ogród za Ciebie — nawet gdy jesteś na urlopie.",
-    bullets: [
-      "Systemy Rain Bird i Hunter",
-      "Projekt i montaż instalacji",
-      "Programowanie i uruchomienie",
-      "Zimowanie i serwis sezonowy",
+      "Autoryzowany montaż systemów Hunter",
+      "Modernizacja istniejących instalacji",
+      "Serwis sezonowy i zimowanie kompresorem",
     ],
     icon: "water",
     image: "/projects/2/Po (1).jpg",
   },
   {
-    title: "Oświetlenie Ogrodowe",
+    title: "Całoroczna Pielęgnacja Ogrodów",
     description:
-      "Ogród piękny nie tylko w dzień. Profesjonalne oświetlenie podkreśla charakter roślin i wydłuża czas korzystania z tarasu.",
+      "Dbamy o to, aby Twoja zieleń zachwycała o każdej porze roku — bez Twojego zaangażowania.",
     bullets: [
-      "Projekt rozmieszczenia punktów świetlnych",
-      "Oświetlenie LED ścieżek i roślin",
-      "Sterowanie strefami i harmonogramem",
-      "Montaż instalacji niskonapięciowej",
+      "Cięcie, formowanie krzewów i żywopłotów",
+      "Wertykulacja, aeracja i nawożenie trawnika",
+      "Zwalczanie szkodników i chorób roślin",
     ],
-    icon: "light",
-    image: "/projects/7/Po (1).jpg",
+    icon: "care",
+    image: "/projects/5/Po (2).jpg",
   },
   {
-    title: "Nawierzchnie i Ścieżki",
+    title: "Mała Architektura i Prace Dodatkowe",
     description:
-      "Kostka, grys, drewno kompozytowe — doradzimy i ułożymy nawierzchnię, która wytrzyma lata bez opadania i przebarwień.",
+      "Dopełniamy ogród elementami funkcjonalnymi, które łączą estetykę z praktycznością.",
     bullets: [
-      "Ścieżki, podjazdy i tarasy",
-      "Kostka brukowa i płyty betonowe",
-      "Drewno kompozytowe i grys",
-      "Obrzeża i elementy małej architektury",
+      "Montaż obrzeży — eko-bordy, kostka, granit",
+      "Ściółkowanie korą sosnową lub kruszywem",
+      "Montaż i konfiguracja robotów koszących",
     ],
     icon: "path",
     image: "/projects/4/Po (1).jpg",

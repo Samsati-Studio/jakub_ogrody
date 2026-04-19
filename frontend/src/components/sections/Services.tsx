@@ -61,17 +61,31 @@ function ServiceCard({ service }: { service: typeof SERVICES[0] }) {
 export default function Services() {
   return (
     <Section id="uslugi" className="bg-light">
-      <SectionHeading subtitle="Kompleksowa oferta usług ogrodniczych">
+      <SectionHeading subtitle="Kompleksowe usługi ogrodnicze">
         Nasze usługi
       </SectionHeading>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((service, index) => (
-          <AnimateOnScroll key={service.title} delay={index * 0.1}>
+          <AnimateOnScroll key={service.title} delay={index * 0.1} className={SERVICES.length % 3 !== 0 && index === SERVICES.length - 1 ? "sm:col-span-2 lg:col-span-1 lg:col-start-2" : ""}>
             <ServiceCard service={service} />
           </AnimateOnScroll>
         ))}
       </div>
+
+      {/* Obszar działania */}
+      <AnimateOnScroll delay={0.3}>
+        <div className="mt-10 flex items-start gap-3 rounded-2xl border border-accent/20 bg-accent/5 px-6 py-5 sm:items-center">
+          <svg className="mt-0.5 h-5 w-5 shrink-0 text-accent sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+          </svg>
+          <p className="text-sm text-slate-600">
+            <span className="font-semibold text-dark">Obszar działania: </span>
+            Nasze usługi realizujemy kompleksowo na terenie powiatu rawickiego i leszczyńskiego oraz we Wrocławiu i okolicznych miejscowościach — Trzebnica, Żmigród, Oborniki Śląskie.
+          </p>
+        </div>
+      </AnimateOnScroll>
     </Section>
   );
 }
