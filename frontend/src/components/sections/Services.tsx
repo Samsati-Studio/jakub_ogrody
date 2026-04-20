@@ -6,6 +6,49 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import AnimateOnScroll from "@/components/ui/AnimateOnScroll";
 import { SERVICES } from "@/lib/constants";
 
+function AreaCard() {
+  return (
+    <div className="group relative overflow-hidden rounded-3xl bg-accent/10 border border-accent/20" style={{ aspectRatio: "4/3" }}>
+      <div className="absolute inset-0 flex flex-col p-6 sm:p-8">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/20">
+            <svg className="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+          </div>
+          <h3 className="text-xl font-bold text-dark">Obszar działania</h3>
+        </div>
+
+        <div className="mt-4 h-px w-16 bg-accent/40" />
+
+        <p className="mt-4 text-sm leading-relaxed text-slate-600">
+          Nasze usługi realizujemy kompleksowo na terenie:
+        </p>
+
+        <ul className="mt-3 space-y-2">
+          {[
+            "Powiat rawicki i leszczyński",
+            "Wrocław i okolice",
+            "Trzebnica, Żmigród, Oborniki Śląskie",
+          ].map((area) => (
+            <li key={area} className="flex items-start gap-2.5 text-sm text-dark">
+              <svg className="mt-0.5 h-4 w-4 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              {area}
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-auto text-xs text-slate-500">
+          Nie ma Cię na liście? Skontaktuj się — rozważamy wyjazdy poza standardowy obszar.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function ServiceCard({ service }: { service: typeof SERVICES[0] }) {
   return (
     <div className="group relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/3" }}>
@@ -67,25 +110,14 @@ export default function Services() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((service, index) => (
-          <AnimateOnScroll key={service.title} delay={index * 0.1} className={SERVICES.length % 3 !== 0 && index === SERVICES.length - 1 ? "sm:col-span-2 lg:col-span-1 lg:col-start-2" : ""}>
+          <AnimateOnScroll key={service.title} delay={index * 0.1}>
             <ServiceCard service={service} />
           </AnimateOnScroll>
         ))}
+        <AnimateOnScroll delay={SERVICES.length * 0.1}>
+          <AreaCard />
+        </AnimateOnScroll>
       </div>
-
-      {/* Obszar działania */}
-      <AnimateOnScroll delay={0.3}>
-        <div className="mt-10 flex items-start gap-3 rounded-2xl border border-accent/20 bg-accent/5 px-6 py-5 sm:items-center">
-          <svg className="mt-0.5 h-5 w-5 shrink-0 text-accent sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-          </svg>
-          <p className="text-sm text-slate-600">
-            <span className="font-semibold text-dark">Obszar działania: </span>
-            Nasze usługi realizujemy kompleksowo na terenie powiatu rawickiego i leszczyńskiego oraz we Wrocławiu i okolicznych miejscowościach — Trzebnica, Żmigród, Oborniki Śląskie.
-          </p>
-        </div>
-      </AnimateOnScroll>
     </Section>
   );
 }
